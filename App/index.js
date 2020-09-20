@@ -1,24 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, StatusBar, SafeAreaView } from "react-native";
+import { Text, View, StatusBar, SafeAreaView } from "react-native";
 
+import MainStyles from "MainStyles";
 import Row from "./components/Row";
 import Button from "./components/Button";
 import calculator, { initialState } from "./util/calculator";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#202020",
-    justifyContent: "flex-end"
-  },
-  value: {
-    color: "#fff",
-    fontSize: 40,
-    textAlign: "right",
-    marginRight: 20,
-    marginBottom: 10
-  }
-});
+const styles = MainStyles;
 
 export default class App extends React.Component {
   state = initialState;
