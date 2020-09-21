@@ -17,6 +17,7 @@ export default ({ onPress, text, size, theme }) => {
     textStyles.push(styles.textSecondary);
   } else if (theme === "accent") {
     buttonStyles.push(styles.buttonAccent);
+    textStyles.push(styles.textAccent);
   }
 
   return (

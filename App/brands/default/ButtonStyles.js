@@ -8,6 +8,9 @@ export default StyleSheet.create({
       color: "#fff",
       fontSize: 25
     },
+    textAccent: {
+      color: "#fff",
+    },
     textSecondary: {
       color: "#060606"
     },
