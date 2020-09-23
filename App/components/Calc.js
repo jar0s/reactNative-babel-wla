@@ -1,26 +1,45 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Text } from "react-native";
 
-import ButtonPanel from "./ButtonPanel";
+import ButtonPanelWrapper from "ButtonPanelWrapper";
 import calculator, { initialState } from "../util/calculator";
 import DisplayStyles from "DisplayStyles";
 
 const styles = DisplayStyles;
 
 export default class Calc extends React.Component {
+
+    static propTypes = {
+      displayOnTop: PropTypes.bool
+    };
+
+    static defaultProps = {
+      displayOnTop: true
+    };
+
     state = initialState;
 
-    handleTap = (type, value) => {
-        this.setState(state => calculator(type, value, state));
+    handleTap = (params) => {
+        this.setState(state => calculator(params.type, params.value, state));
       };
 
     render() {
         return (
           <>
-          <Text style={styles.display}>
-            {parseFloat(this.state.currentValue).toLocaleString()}
-          </Text>
-          <ButtonPanel handleTap={this.handleTap}/>
+          {this.props.displayOnTop &&
+            <Text style={styles.display}>
+                {parseFloat(this.state.currentValue).toLocaleString()}
+            </Text>
+          }
+
+          <ButtonPanelWrapper handleTap={this.handleTap}/>
+
+          {!this.props.displayOnTop &&
+            <Text style={styles.display}>
+                {parseFloat(this.state.currentValue).toLocaleString()}
+            </Text>
+          }
           </>
         );
     }
