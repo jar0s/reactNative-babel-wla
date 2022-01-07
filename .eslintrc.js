@@ -1,3 +1,4 @@
 module.exports = {
-  extends: "handlebarlabs"
+  root: true,
+  extends: '@react-native-community',
 };
