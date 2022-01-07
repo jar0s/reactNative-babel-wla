@@ -13,9 +13,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "expo": "^38.0.0",
-    "react": "16.11.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz"
+    "expo": "^44.0.4",
+    "react": "17.0.1",
+    "react-native": "0.64.3"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^4.0.0",
