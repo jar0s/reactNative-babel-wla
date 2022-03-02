@@ -57,4 +57,8 @@ buck-out/
 *.jsbundle
 
 # CocoaPods
-/ios/Pods/
+/ios_template/Pods
+
+# Pltaform specific folder are templated and auto-generated per brand so don't need to be in version control
+/android
+/ios
