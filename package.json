@@ -9,7 +9,10 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "configure-brand": "./scripts/configure_brand.sh android ios",
+    "configure-brand:android": "./scripts/configure_brand.sh android",
+    "configure-brand:ios": "./scripts/configure_brand.sh ios"
   },
   "dependencies": {
     "react": "17.0.2",
