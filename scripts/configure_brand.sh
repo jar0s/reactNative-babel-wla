@@ -3,6 +3,9 @@ set -e
 
 # This script is meant to be run from the rrot of the project. Use `yarn configure-brand` convenience commands to trigger it.
 
+# Ensure env vars from EnvKey are loaded
+. ./scripts/load_env.sh 
+
 # Use "configure_brand.sh android" or "configure_brand.sh ios" to configure respective platforms, or pass in all platforms
 for OPTION in "$@"; do
     if [[ "$OPTION" == "android" ]]; then
@@ -13,6 +16,9 @@ for OPTION in "$@"; do
 done
 
 if [[ true == "$configureAndroid" ]]; then
+    echo -e "\n=> Cleaning up previous Android project..."
+    rm -rf android
+
     echo -e "\n=> Configuring Android project..."
     cp -rf android_template android
 
@@ -21,9 +27,14 @@ if [[ true == "$configureAndroid" ]]; then
     echo -e "\n=> Copying brand app icon from: $sourceDir..."
     [[ ! -d "$sourceDir" ]] && echo "Couldn't copy from $sourceDir. Directory doesn't exist" && exit 1
     cp -rf $sourceDir/* "android/app/src/main/res/"
+
+    # Env vars for Android are handled directly via 'android_template/app/build.gradle'
 fi
 
 if [[ true == "$configureIOS" ]]; then
+    echo -e "\n=> Cleaning up previous iOS project..."
+    rm -rf ios
+
     echo -e "\n=> Configuring iOS project..."
     cp -rf ios_template ios
 
@@ -32,4 +43,8 @@ if [[ true == "$configureIOS" ]]; then
     echo -e "\n=> Copying brand app icon from: $sourceDir..."
     [[ ! -d "$sourceDir" ]] && echo "Couldn't copy from $sourceDir. Directory doesn't exist" && exit 1
     cp -rf $sourceDir/* "ios/ReactNativeWLA/Images.xcassets/"
+
+    # Set bundle ID and app name for iOS
+    /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier $BUNDLE_ID" ios/ReactNativeWLA/Info.plist
+    /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName $DISPLAY_NAME" ios/ReactNativeWLA/Info.plist
 fi

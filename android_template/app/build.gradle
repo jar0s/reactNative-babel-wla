@@ -125,17 +125,24 @@ def enableHermes = project.ext.react.get("enableHermes", false);
  */
 def nativeArchitectures = project.getProperties().get("reactNativeDebugArchitectures")
 
+/**
+* Custom config per brand
+*/
+def bundleId = System.getenv('BUNDLE_ID')
+def displayName = System.getenv('DISPLAY_NAME')
+
 android {
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.reactnativewla"
+        applicationId bundleId
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        manifestPlaceholders = [ BUNDLE_ID: bundleId, DISPLAY_NAME: displayName ]
     }
     splits {
         abi {

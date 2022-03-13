@@ -5,9 +5,9 @@
   "license": "WTFPL",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
+    "android": ". scripts/load_env.sh && react-native run-android --appId $BUNDLE_ID",
+    "ios": ". scripts/load_env.sh && react-native run-ios",
+    "start": ". scripts/load_env.sh && react-native start",
     "test": "jest",
     "lint": "eslint .",
     "configure-brand": "./scripts/configure_brand.sh android ios",
