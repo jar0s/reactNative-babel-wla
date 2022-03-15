@@ -15,6 +15,12 @@ for OPTION in "$@"; do
     fi
 done
 
+if [[ -d "App/brands/$APP_BRAND/nativeAssets/fonts" ]]; then
+    assetsDir="App/brands/$APP_BRAND/nativeAssets/fonts"
+else
+    assetsDir="App/brands/default/nativeAssets/fonts"
+fi
+
 if [[ true == "$configureAndroid" ]]; then
     echo -e "\n=> Cleaning up previous Android project..."
     rm -rf android
@@ -27,6 +33,10 @@ if [[ true == "$configureAndroid" ]]; then
     echo -e "\n=> Copying brand app icon from: $sourceDir..."
     [[ ! -d "$sourceDir" ]] && echo "Couldn't copy from $sourceDir. Directory doesn't exist" && exit 1
     cp -rf $sourceDir/* "android/app/src/main/res/"
+
+    # Ensure only the required fonts are added for the given brand
+    echo -e "\n=> Linking native assets from: $assetsDir"
+    npx react-native-asset --android-assets $assetsDir
 
     # Env vars for Android are handled directly via 'android_template/app/build.gradle'
 fi
@@ -47,4 +57,8 @@ if [[ true == "$configureIOS" ]]; then
     # Set bundle ID and app name for iOS
     /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier $BUNDLE_ID" ios/ReactNativeWLA/Info.plist
     /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName $DISPLAY_NAME" ios/ReactNativeWLA/Info.plist
+
+    # Ensure only the required fonts are added for the given brand
+    echo -e "\n=> Linking native assets from: $assetsDir"
+    npx react-native-asset --ios-assets $assetsDir
 fi

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Text } from "react-native";
 
+import AppTextWrapper from "AppTextWrapper";
 import ButtonPanelWrapper from "ButtonPanelWrapper";
 import calculator, { initialState } from "../util/calculator";
 import DisplayStyles from "DisplayStyles";
@@ -28,17 +28,17 @@ export default class Calc extends React.Component {
         return (
           <>
           {this.props.displayOnTop &&
-            <Text style={styles.display}>
+            <AppTextWrapper style={styles.display}>
                 {parseFloat(this.state.currentValue).toLocaleString()}
-            </Text>
+            </AppTextWrapper>
           }
 
           <ButtonPanelWrapper handleTap={this.handleTap}/>
 
           {!this.props.displayOnTop &&
-            <Text style={styles.display}>
+            <AppTextWrapper style={styles.display}>
                 {parseFloat(this.state.currentValue).toLocaleString()}
-            </Text>
+            </AppTextWrapper>
           }
           </>
         );
