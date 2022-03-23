@@ -27,20 +27,20 @@ export default class Calc extends React.Component {
     render() {
         return (
           <>
-          {this.props.displayOnTop &&
-            <AppTextWrapper style={styles.display}>
-                {parseFloat(this.state.currentValue).toLocaleString()}
-            </AppTextWrapper>
-          }
+          {this.props.displayOnTop && this.renderDisplay()}
 
           <ButtonPanelWrapper handleTap={this.handleTap}/>
 
-          {!this.props.displayOnTop &&
-            <AppTextWrapper style={styles.display}>
-                {parseFloat(this.state.currentValue).toLocaleString()}
-            </AppTextWrapper>
-          }
+          {!this.props.displayOnTop && this.renderDisplay()}
           </>
         );
+    }
+
+    renderDisplay() {
+      return (
+          <AppTextWrapper style={styles.display}>
+              {parseFloat(this.state.currentValue).toLocaleString()}
+          </AppTextWrapper>
+      );
     }
 }
