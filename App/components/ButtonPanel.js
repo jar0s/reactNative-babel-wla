@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Row from "./Row";
-import Button from "./Button";
+import Row from "@genericComponents/Row";
+import Button from "@genericComponents/Button";
 
 export default class ButtonPanel extends React.Component {
 

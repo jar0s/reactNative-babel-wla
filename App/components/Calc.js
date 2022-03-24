@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import AppTextWrapper from "AppTextWrapper";
 import ButtonPanelWrapper from "ButtonPanelWrapper";
-import calculator, { initialState } from "../util/calculator";
+import calculator, { initialState } from "@/util/calculator";
 import DisplayStyles from "DisplayStyles";
 
 const styles = DisplayStyles;

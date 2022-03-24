@@ -8,7 +8,11 @@ module.exports = function(api) {
     presets: ['module:metro-react-native-babel-preset'],
     plugins: [
       ['module-resolver', {
-        root: ['./App', brandPath, './App/brands/default']
+        root: [brandPath, './App/brands/default'],
+        alias: {
+          '@': './App',
+          '@genericComponents': './App/components'
+        }
       }]
     ]
   };
