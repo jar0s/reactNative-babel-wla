@@ -49,6 +49,9 @@ if [[ true == "$configureIOS" ]]; then
     echo -e "\n=> Cleaning up previous iOS project..."
     rm -rf ios
 
+    echo -e "\n=> Installing pods..."
+    cd ios_template && pod install && cd ..
+
     echo -e "\n=> Configuring iOS project..."
     cp -rf ios_template ios
 
