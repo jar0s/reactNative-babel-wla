@@ -4,7 +4,11 @@ set -e
 # This script is meant to be run from the rrot of the project. Use `yarn configure-brand` convenience commands to trigger it.
 
 # Ensure env vars from EnvKey are loaded
-. ./scripts/load_env.sh 
+. ./scripts/load_env.sh
+
+# (re)Generate tsconfig.json file with appropriate paths for the given brand (ignoring 'ios' folder explicitly due to https://github.com/rasenplanscher/tsconfig.js/issues/10)
+echo -e "\n=> Generating tsconfig.json ..."
+npx tsconfig.js --once -- ios ios_template node_modules
 
 # Use "configure_brand.sh android" or "configure_brand.sh ios" to configure respective platforms, or pass in all platforms
 for OPTION in "$@"; do

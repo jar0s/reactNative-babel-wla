@@ -63,4 +63,5 @@ buck-out/
 /android
 /ios
 
-.env
+# tsconfig.json is an auto-generated file so doen't need to be under version control
+tsconfig.json
