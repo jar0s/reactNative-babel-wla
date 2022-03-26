@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="298px" preserveAspectRatio="none" style="width:727px;height:298px;background:#FFFFFF;" version="1.1" viewBox="0 0 727 298" width="727px" zoomAndPan="magnify"><defs><filter height="300%" id="f16ex9sxy3q196" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[b84d8dbe3cf51322a9824c71d57d534f]
+entity dotenv--><rect fill="#FEFECE" filter="url(#f16ex9sxy3q196)" height="22.2969" style="stroke:#000000;stroke-width:1.5;" width="78" x="7" y="22.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="17" y="38.4951">.env file</text><!--MD5=[3f95a307b1d3dbd634fe2c333ac90b68]
+entity EnvKey--><rect fill="#FEFECE" filter="url(#f16ex9sxy3q196)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="73" x="199.5" y="15.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="209.5" y="38.4951">EnvKey</text><!--MD5=[61ed64a194effbdc1b7b202e335d389f]
+entity ios_tpl--><rect fill="#FEFECE" filter="url(#f16ex9sxy3q196)" height="52.5938" style="stroke:#000000;stroke-width:1.5;" width="115" x="312.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="322.5" y="29.9951">ios_template</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="322.5" y="46.292">folder</text><!--MD5=[ec2566c18e11dc4dce2468dca47230fe]
+entity andr_tpl--><rect fill="#FEFECE" filter="url(#f16ex9sxy3q196)" height="52.5938" style="stroke:#000000;stroke-width:1.5;" width="149" x="462.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="472.5" y="29.9951">android_template</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="472.5" y="46.292">folder</text><!--MD5=[10f2da05e042d3bba8060fc262f97e96]
+entity brands--><rect fill="#FEFECE" filter="url(#f16ex9sxy3q196)" height="52.5938" style="stroke:#000000;stroke-width:1.5;" width="69" x="646.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="656.5" y="29.9951">brands</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="656.5" y="46.292">folder</text><!--MD5=[b3eb2ab614216420900eaf224e420b27]
+entity conf_prj--><rect fill="#FEFECE" filter="url(#f16ex9sxy3q196)" height="36.2969" style="stroke:#A80036;stroke-width:1.5;" width="169" x="291.5" y="137"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="301.5" y="159.9951">configure_brand.sh</text><!--MD5=[8ed4d620cd329dd8b7225117d431ebf6]
+entity andr_prj--><rect fill="#FEFECE" filter="url(#f16ex9sxy3q196)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="131" x="236.5" y="250"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="246.5" y="272.9951">android project</text><!--MD5=[b213baa3eedfd7e16bcad8aae9b2bbcd]
+entity ios_prj--><rect fill="#FEFECE" filter="url(#f16ex9sxy3q196)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="97" x="402.5" y="250"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="412.5" y="272.9951">ios project</text><!--MD5=[4252ff1f7da3761e774e425fee5b202c]
+link dotenv to conf_prj--><path d="M49.8976,44.633 C56.6509,60.715 72.1352,91.815 96,107 C126.966,126.704 216.662,139.388 286.277,146.552 " fill="none" id="dotenv-to-conf_prj" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="291.254,147.059,282.7061,142.1668,286.2798,146.5519,281.8947,150.1255,291.254,147.059" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="97" y="103.0669">Provides ENVKEY value</text><!--MD5=[334ce56a2146011fb3309b26331d0bae]
+link EnvKey to conf_prj--><path d="M238.904,51.514 C242.474,67.672 250.007,91.703 265,107 C276.749,118.987 292.031,128.076 307.479,134.906 " fill="none" id="EnvKey-to-conf_prj" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="312.275,136.954,305.5678,129.742,307.6764,134.9911,302.4272,137.0997,312.275,136.954" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="266" y="103.0669">Provides config</text><!--MD5=[724e14013c41d37920040205aea8140d]
+link andr_tpl to conf_prj--><path d="M502.461,60.136 C472.817,82.139 430.668,113.424 403.326,133.718 " fill="none" id="andr_tpl-to-conf_prj" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="399.069,136.878,408.6801,134.7268,403.0842,133.8984,403.9127,128.3025,399.069,136.878" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="463" y="103.0669">Input</text><!--MD5=[1f7366f259e3b87dba3c4d0656585dc7]
+link ios_tpl to conf_prj--><path d="M371.287,60.136 C372.356,81.414 373.86,111.374 374.879,131.679 " fill="none" id="ios_tpl-to-conf_prj" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="375.14,136.878,378.6823,127.6882,374.8885,131.8843,370.6924,128.0906,375.14,136.878" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="375" y="103.0669">Input</text><!--MD5=[e5b5a4ffcea82cc9a6ebae73645fc162]
+link brands to conf_prj--><path d="M646.251,52.113 C640.53,54.847 634.631,57.568 629,60 C562.118,88.893 483.151,117.364 431.45,135.268 " fill="none" id="brands-to-conf_prj" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="426.533,136.967,436.3461,137.8058,431.2584,135.3328,433.7314,130.2452,426.533,136.967" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="555" y="103.0669">Input</text><!--MD5=[c0d5cd1d4e2b6c9619b7c4984d7d7c09]
+link conf_prj to andr_prj--><path d="M361.329,173.405 C354.272,182.077 345.874,192.8556 339,203 C329.767,216.6263 320.498,232.6623 313.548,245.2736 " fill="none" id="conf_prj-to-andr_prj" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="311.096,249.7541,318.9246,243.7781,313.4957,245.3676,311.9062,239.9386,311.096,249.7541" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="340" y="216.0669">Generates</text><!--MD5=[beaeef5ee36c001dc8cdc675a59c27e5]
+link conf_prj to ios_prj--><path d="M389.785,173.084 C396.685,181.86 405.031,192.8235 412,203 C421.429,216.7683 431.198,232.804 438.601,245.3797 " fill="none" id="conf_prj-to-ios_prj" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="441.216,249.8457,440.1209,240.0579,438.6899,245.5308,433.217,244.0997,441.216,249.8457" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="424" y="216.0669">Generates</text><!--MD5=[1a823ac2a67f1ea5272b8d0af6a22da1]
+@startuml
+skinparam backgroundColor white
+
+card ".env file" as dotenv
+rectangle EnvKey
+rectangle "ios_template\nfolder" as ios_tpl
+rectangle "android_template\nfolder" as andr_tpl
+rectangle "brands\nfolder" as brands
+agent "configure_brand.sh" as conf_prj
+rectangle "android project" as andr_prj
+rectangle "ios project" as ios_prj
+
+dotenv - -> conf_prj: Provides ENVKEY value
+EnvKey  - -> conf_prj: Provides config
+andr_tpl - -> conf_prj: Input
+ios_tpl - -> conf_prj: Input
+brands - -> conf_prj: Input
+conf_prj - -> andr_prj: Generates
+conf_prj - -> ios_prj: Generates
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 12:40:07 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

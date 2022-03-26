@@ -4,30 +4,51 @@ It's a simple React Native application, based on [this calculator](https://githu
 
 Have a look at [this blog post](https://medium.com/@jaroslaw.marek/white-label-mobile-app-with-react-native-and-babel-490363ec59) for a detailed explanation of how it works.
 
+# Local setup
+## EnvKey
+This project uses [EnvKey]() for configuration management. YOu need to install `envkey-source` to be able to run it locally:
+```
+curl -s https://raw.githubusercontent.com/envkey/envkey-source/master/install.sh | bash
+```
+
+## Select which product brand you work on
+In your .env file, ensure the value of ENVKEY is set and points to the desired brand configuration from EnvKey.
+Then run following command to configure the given brand:
+```
+yarn configure-brand
+```
+
+Note: for Mac, it is necessary to have XCode installed and on the path prior to running
+`yarn configure-brand`.
+
 # Building
 
 You can build three different versions of this app. One for each "brand": `calc_co`, `acme` and the default.
 
 Obviously, before building it you need to run `yarn install`.
 
-## Default brand
+# Running
 
-`yarn run android` or `yarn run ios` will produce the following app.
+Ensure you start the Metro bundler manually (with `yarn start`) before running the app in Debug mode.
+When Metro is started automatically via react-native scripts, it does not contain the required environmental variables.
+
+`yarn android` or `yarn ios` will produce one of the following apps (depending on which ENVKEY is defined in the `.env` file).
 
 ![Default branded app screenshot](docs/img/default.png)
 
-## Acme brand
-
-`APP_BRAND=acme yarn run android` or `APP_BRAND=acme yarn run ios` will produce the following app.
-
 ![Acme branded app screenshot](docs/img/acme.png)
-
-## Calc Co brand
-
-`APP_BRAND=calc_co yarn run android` or `APP_BRAND=calc_co yarn run ios` will produce the following app.
 
 ![Calc_co branded app screenshot](docs/img/calc_co.png)
 
-# Switching between the brands in emulator
+## Switching between the brands
 
-In order to be able to switch between various branded versions of this app in an emulator you may need to run it with `--clear` option (e.g. `yarn run android --clear`) and reload the app within Expo (press Ctrl+M or Cmd+M and tap "Reload").
+1. Stop the Metro bundler.
+1. Change  value of `ENVKEY` in the `.env` file.
+1. Run `yarn configure-brand`.
+1. Start the Metro bundler with `yarn start --reset-cache` (resetting the bundler cache is important here)
+1. Start the app with `yarn android` or `yarn ios`
+
+# More detailed docs
+- Usage of the Whitelabelling mechanism: [docs/usage.md](docs/usage.md)
+- Intricacies and mechanics of the Whitelabelling mechanism: [docs/mechanics.md](docs/mechanics.md)
+- Known issues: [docs/known_issues.md](docs/known_issues.md)
