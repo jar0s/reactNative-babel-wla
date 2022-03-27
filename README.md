@@ -6,20 +6,21 @@ Have a look at [this blog post](https://medium.com/@jaroslaw.marek/white-label-m
 
 # Local setup
 ## EnvKey
-This project uses [EnvKey]() for configuration management. YOu need to install `envkey-source` to be able to run it locally:
+This project uses [EnvKey](https://envkey.com/) for configuration management. You need to install `envkey-source` to be able to run it locally:
 ```
 curl -s https://raw.githubusercontent.com/envkey/envkey-source/master/install.sh | bash
 ```
 
 ## Select which product brand you work on
 In your .env file, ensure the value of ENVKEY is set and points to the desired brand configuration from EnvKey.
-Then run following command to configure the given brand:
+Then run the following command to configure the given brand:
 ```
 yarn configure-brand
 ```
 
-Note: for Mac, it is necessary to have XCode installed and on the path prior to running
-`yarn configure-brand`.
+Note: for Mac, it is necessary to have XCode installed and on the path prior to running `yarn configure-brand`.
+
+Note: if you're not on Mac, you can use the `yarn configure-brand:android` instead.
 
 # Building
 
