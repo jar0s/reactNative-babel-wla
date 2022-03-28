@@ -1,54 +1,54 @@
 export const initialState = {
-  currentValue: "0",
+  currentValue: '0',
   operator: null,
-  previousValue: null
+  previousValue: null,
 };
 
 export const handleNumber = (value, state) => {
-  if (state.currentValue === "0") {
-    return { currentValue: `${value}` };
+  if (state.currentValue === '0') {
+    return {currentValue: `${value}`};
   }
 
   return {
-    currentValue: `${state.currentValue}${value}`
+    currentValue: `${state.currentValue}${value}`,
   };
 };
 
 export const handleEqual = state => {
-  const { currentValue, previousValue, operator } = state;
+  const {currentValue, previousValue, operator} = state;
 
   const current = parseFloat(currentValue);
   const previous = parseFloat(previousValue);
   const resetState = {
     operator: null,
-    previousValue: null
+    previousValue: null,
   };
 
-  if (operator === "/") {
+  if (operator === '/') {
     return {
       currentValue: previous / current,
-      ...resetState
+      ...resetState,
     };
   }
 
-  if (operator === "*") {
+  if (operator === '*') {
     return {
       currentValue: previous * current,
-      ...resetState
+      ...resetState,
     };
   }
 
-  if (operator === "+") {
+  if (operator === '+') {
     return {
       currentValue: previous + current,
-      ...resetState
+      ...resetState,
     };
   }
 
-  if (operator === "-") {
+  if (operator === '-') {
     return {
       currentValue: previous - current,
-      ...resetState
+      ...resetState,
     };
   }
 
@@ -57,25 +57,25 @@ export const handleEqual = state => {
 
 const calculator = (type, value, state) => {
   switch (type) {
-    case "number":
+    case 'number':
       return handleNumber(value, state);
-    case "operator":
+    case 'operator':
       return {
         operator: value,
         previousValue: state.currentValue,
-        currentValue: "0"
+        currentValue: '0',
       };
-    case "equal":
+    case 'equal':
       return handleEqual(state);
-    case "clear":
+    case 'clear':
       return initialState;
-    case "posneg":
+    case 'posneg':
       return {
-        currentValue: `${parseFloat(state.currentValue) * -1}`
+        currentValue: `${parseFloat(state.currentValue) * -1}`,
       };
-    case "percentage":
+    case 'percentage':
       return {
-        currentValue: `${parseFloat(state.currentValue) * 0.01}`
+        currentValue: `${parseFloat(state.currentValue) * 0.01}`,
       };
     default:
       return state;

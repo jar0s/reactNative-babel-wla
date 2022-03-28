@@ -1,12 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import Calc from "../../components/Calc";
+import Calc from '../../components/Calc';
 
 export default class CalcWrapper extends React.Component {
-
-    render() {
-        return (
-            <Calc />
-        );
-    }
+  render() {
+    return <Calc />;
+  }
 }

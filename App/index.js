@@ -1,9 +1,9 @@
-import React from "react";
-import { View, StatusBar, SafeAreaView } from "react-native";
-import * as Sentry from "@sentry/react-native";
+import React from 'react';
+import {View, StatusBar, SafeAreaView} from 'react-native';
+import * as Sentry from '@sentry/react-native';
 
-import CalcWrapper from "CalcWrapper";
-import MainStyles from "MainStyles";
+import CalcWrapper from 'CalcWrapper';
+import MainStyles from 'MainStyles';
 
 const styles = MainStyles;
 
@@ -17,7 +17,6 @@ Sentry.configureScope(scope => {
 });
 
 class App extends React.Component {
-
   render() {
     return (
       <View style={styles.container}>
