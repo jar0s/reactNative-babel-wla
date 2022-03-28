@@ -13,7 +13,12 @@ module.exports = function(api) {
           '@': './App',
           '@genericComponents': './App/components'
         }
-      }]
+      }],
+      [ 'transform-inline-environment-variables',
+        {
+          include: ['SENTRY_DSN', 'BUNDLE_ID']
+        }
+      ]
     ]
   };
 };
