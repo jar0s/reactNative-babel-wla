@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# This script is meant to be run from the rrot of the project. Use `yarn configure-brand` convenience commands to trigger it.
+# This script is meant to be run from the root of the project. Use `yarn configure-brand` convenience commands to trigger it.
 
 # Ensure env vars from EnvKey are loaded
 . ./scripts/load_env.sh
@@ -49,11 +49,11 @@ if [[ true == "$configureIOS" ]]; then
     echo -e "\n=> Cleaning up previous iOS project..."
     rm -rf ios
 
-    echo -e "\n=> Installing pods..."
-    cd ios_template && pod install && cd ..
-
     echo -e "\n=> Configuring iOS project..."
     cp -rf ios_template ios
+
+    echo -e "\n=> Installing pods..."
+    cd ios && pod install && cd ..
 
     # Apply app icon
     sourceDir="App/brands/$APP_BRAND/nativeAssets/appIcon/ios"
