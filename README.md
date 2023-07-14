@@ -53,3 +53,8 @@ When Metro is started automatically via react-native scripts, it does not contai
 - Usage of the Whitelabelling mechanism: [docs/usage.md](docs/usage.md)
 - Intricacies and mechanics of the Whitelabelling mechanism: [docs/mechanics.md](docs/mechanics.md)
 - Known issues: [docs/known_issues.md](docs/known_issues.md)
+
+# Funding
+
+If you like my work and thinking about using it in a commercial project, please consider [buying me a coffee](https://www.buymeacoffee.com/jar0s).
+Thank you.

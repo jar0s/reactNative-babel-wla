@@ -4,6 +4,10 @@
   "author": "Jaroslaw Marek",
   "license": "WTFPL",
   "private": true,
+  "funding": {
+    "type" : "BuyMeACoffee",
+    "url" : "https://www.buymeacoffee.com/jar0s"
+  },
   "scripts": {
     "android": ". scripts/load_env.sh && react-native run-android --appId $BUNDLE_ID",
     "ios": ". scripts/load_env.sh && react-native run-ios",
