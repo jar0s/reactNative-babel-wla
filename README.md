@@ -6,9 +6,9 @@ Have a look at [this blog post](https://medium.com/@jaroslaw.marek/white-label-m
 
 # Local setup
 ## EnvKey
-This project uses [EnvKey](https://envkey.com/) for configuration management. You need to install `envkey-source` to be able to run it locally:
+This project uses [EnvKey](https://envkey.com/) for configuration management. You need to install [`envkey-source`](https://docs-v2.envkey.com/docs/install#install-envkey-source-standalone) to be able to run it locally:
 ```
-curl -s https://raw.githubusercontent.com/envkey/envkey-source/master/install.sh | bash
+VERSION=$(curl https://envkey-releases.s3.amazonaws.com/latest/envkeysource-version.txt) && curl -s https://envkey-releases.s3.amazonaws.com/envkeysource/release_artifacts/$VERSION/install.sh | bash
 ```
 
 ## Select which product brand you work on
