@@ -6,4 +6,7 @@ export default StyleSheet.create({
     backgroundColor: '#fdf6e3',
     justifyContent: 'flex-end',
   },
+  myAppText: {
+    fontFamily: 'FreeMonoBold',
+  },
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
-import AppTextWrapper from 'AppTextWrapper';
+import AppText from './AppText';
 import ButtonStyles from 'ButtonStyles';
 
 const styles = ButtonStyles;
@@ -23,7 +23,7 @@ export default ({onPress, text, size, theme}) => {
 
   return (
     <TouchableOpacity onPress={onPress} style={buttonStyles}>
-      <AppTextWrapper style={textStyles}>{text}</AppTextWrapper>
+      <AppText style={textStyles}>{text}</AppText>
     </TouchableOpacity>
   );
 };

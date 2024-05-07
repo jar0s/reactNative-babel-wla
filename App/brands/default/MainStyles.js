@@ -6,4 +6,7 @@ export default StyleSheet.create({
     backgroundColor: '#202020',
     justifyContent: 'flex-end',
   },
+  myAppText: {
+    fontFamily: 'Ubuntu',
+  },
 });

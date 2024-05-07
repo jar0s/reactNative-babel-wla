@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import AppTextWrapper from 'AppTextWrapper';
+import AppText from './AppText';
 import ButtonPanelWrapper from 'ButtonPanelWrapper';
 import calculator, {initialState} from '@/util/calculator';
 import DisplayStyles from 'DisplayStyles';
@@ -37,9 +37,9 @@ export default class Calc extends React.Component {
 
   renderDisplay() {
     return (
-      <AppTextWrapper style={styles.display}>
+      <AppText style={styles.display}>
         {parseFloat(this.state.currentValue).toLocaleString()}
-      </AppTextWrapper>
+      </AppText>
     );
   }
 }
