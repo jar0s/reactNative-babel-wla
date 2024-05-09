@@ -20,7 +20,7 @@ module.exports = api => {
       [
         'transform-inline-environment-variables',
         {
-          include: ['SENTRY_DSN', 'BUNDLE_ID'],
+          include: ['SENTRY_DSN', 'BUNDLE_ID', 'APP_BRAND'],
         },
       ],
     ],

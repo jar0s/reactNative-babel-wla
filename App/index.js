@@ -28,3 +28,4 @@ class App extends React.Component {
 }
 
 export default Sentry.wrap(App);
+// export {default} from '../.storybook';
