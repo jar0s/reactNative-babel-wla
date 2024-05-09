@@ -1,4 +1,5 @@
 module.exports = {
+  extends: '@react-native/typescript-config/tsconfig.json',
   compilerOptions: {
     /* Basic Options */
     target:

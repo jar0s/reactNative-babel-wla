@@ -5,7 +5,7 @@ console.log(`Bundling for the brand: ${process.env.APP_BRAND}`);
 module.exports = api => {
   api.cache(true);
   return {
-    presets: ['module:metro-react-native-babel-preset'],
+    presets: ['module:@react-native/babel-preset'],
     plugins: [
       [
         'module-resolver',
