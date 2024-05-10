@@ -1,7 +1,7 @@
 import React from 'react';
 import {TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
 import AppText from './AppText';
-import designTokens from 'designTokens';
+import designTokens from '../util/designTokenProvider';
 
 export default ({onPress, text, size, theme}) => {
   const buttonStyles = [styles.button];

@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import designTokens from 'designTokens';
+import designTokens from '../util/designTokenProvider';
 
 export default StyleSheet.create({
   container: {

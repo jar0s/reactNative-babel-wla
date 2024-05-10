@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ButtonPanel from '../../components/ButtonPanel';
+import translations from 'translations';
 
 export default class ButtonPanelWrapper extends React.Component {
   static propTypes = {
@@ -11,33 +12,33 @@ export default class ButtonPanelWrapper extends React.Component {
   render() {
     const buttonsMatrix = [
       [
-        {text: 'C', theme: 'secondary', tapParams: {type: 'clear'}},
-        {text: '+/-', theme: 'secondary', tapParams: {type: 'posneg'}},
-        {text: '%', theme: 'secondary', tapParams: {type: 'percentage'}},
-        {text: '/', theme: 'accent', tapParams: {type: 'operator', value: '/'}},
+        {text: translations['symbol.cancel'], theme: 'secondary', tapParams: {type: 'clear'}},
+        {text: translations['symbol.positivenegative'], theme: 'secondary', tapParams: {type: 'posneg'}},
+        {text: translations['symbol.percent'], theme: 'secondary', tapParams: {type: 'percentage'}},
+        {text: translations['symbol.divide'], theme: 'accent', tapParams: {type: 'operator', value: '/'}},
       ],
       [
-        {text: '7', tapParams: {type: 'number', value: 7}},
-        {text: '8', tapParams: {type: 'number', value: 8}},
-        {text: '9', tapParams: {type: 'number', value: 9}},
-        {text: 'X', theme: 'accent', tapParams: {type: 'operator', value: '*'}},
+        {text: translations['number.seven'], tapParams: {type: 'number', value: 7}},
+        {text: translations['number.eight'], tapParams: {type: 'number', value: 8}},
+        {text: translations['number.nine'], tapParams: {type: 'number', value: 9}},
+        {text: translations['symbol.multiply'], theme: 'accent', tapParams: {type: 'operator', value: '*'}},
       ],
       [
-        {text: '4', tapParams: {type: 'number', value: 4}},
-        {text: '5', tapParams: {type: 'number', value: 5}},
-        {text: '6', tapParams: {type: 'number', value: 6}},
-        {text: '-', theme: 'accent', tapParams: {type: 'operator', value: '-'}},
+        {text: translations['number.four'], tapParams: {type: 'number', value: 4}},
+        {text: translations['number.five'], tapParams: {type: 'number', value: 5}},
+        {text: translations['number.six'], tapParams: {type: 'number', value: 6}},
+        {text: translations['symbol.minus'], theme: 'accent', tapParams: {type: 'operator', value: '-'}},
       ],
       [
-        {text: '1', tapParams: {type: 'number', value: 1}},
-        {text: '2', tapParams: {type: 'number', value: 2}},
-        {text: '3', tapParams: {type: 'number', value: 3}},
-        {text: '+', theme: 'accent', tapParams: {type: 'operator', value: '+'}},
+        {text: translations['number.one'], tapParams: {type: 'number', value: 1}},
+        {text: translations['number.two'], tapParams: {type: 'number', value: 2}},
+        {text: translations['number.three'], tapParams: {type: 'number', value: 3}},
+        {text: translations['symbol.plus'], theme: 'accent', tapParams: {type: 'operator', value: '+'}},
       ],
       [
-        {text: '0', size: 'double', tapParams: {type: 'number', value: 0}},
-        {text: '.', tapParams: {type: 'number', value: '.'}},
-        {text: '=', theme: 'accent', tapParams: {type: 'equal'}},
+        {text: translations['number.zero'], size: 'double', tapParams: {type: 'number', value: 0}},
+        {text: translations['symbol.dot'], tapParams: {type: 'number', value: '.'}},
+        {text: translations['symbol.equals'], theme: 'accent', tapParams: {type: 'equal'}},
       ],
     ];
 

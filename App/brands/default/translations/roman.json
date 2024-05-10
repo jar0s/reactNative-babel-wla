@@ -1,0 +1,21 @@
+{
+    "number.zero": "N",
+    "number.one": "I",
+    "number.two": "II",
+    "number.three": "III",
+    "number.four": "IV",
+    "number.five": "V",
+    "number.six": "VI",
+    "number.seven": "VII",
+    "number.eight": "VIII",
+    "number.nine": "IX",
+    "symbol.cancel": "C",
+    "symbol.positivenegative": "+/-",
+    "symbol.percent": "%",
+    "symbol.divide": "/",
+    "symbol.multiply": "*",
+    "symbol.minus": "-",
+    "symbol.plus": "+",
+    "symbol.dot": ".",
+    "symbol.equals": "="
+}
