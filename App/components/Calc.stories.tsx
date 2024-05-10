@@ -1,7 +1,7 @@
 import { View } from 'react-native';
 import type { Meta, StoryObj } from '@storybook/react';
 import Calc from 'CalcWrapper';
-import styles from 'MainStyles';
+import styles from './MainStyles';
 
 const CalcMeta: Meta<typeof Calc> = {
   title: `Calc: ${process.env.APP_BRAND}`,

@@ -1,12 +1,11 @@
 import React from 'react';
+import {StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
 
+import designTokens from 'designTokens';
 import AppText from './AppText';
 import ButtonPanelWrapper from 'ButtonPanelWrapper';
 import calculator, {initialState} from '@/util/calculator';
-import DisplayStyles from 'DisplayStyles';
-
-const styles = DisplayStyles;
 
 export default class Calc extends React.Component {
   static propTypes = {
@@ -43,3 +42,13 @@ export default class Calc extends React.Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  display: {
+    color: designTokens.display.color.text,
+    fontSize: 40,
+    textAlign: 'right',
+    marginRight: 20,
+    marginBottom: 10,
+  },
+});

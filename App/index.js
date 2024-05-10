@@ -3,7 +3,7 @@ import {View, StatusBar, SafeAreaView} from 'react-native';
 import * as Sentry from '@sentry/react-native';
 
 import CalcWrapper from 'CalcWrapper';
-import styles from 'MainStyles';
+import styles from './components/MainStyles';
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,

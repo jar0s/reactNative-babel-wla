@@ -1,0 +1,52 @@
+{
+    "app": {
+        "color": {
+            "background": "#202020"
+        },
+        "content": {
+            "justify": "flex-end"
+        },
+        "font": {
+            "family": "Ubuntu"
+        }
+    },
+    "display": {
+        "color": {
+            "text": "#ffffff"
+        },
+        "font": {
+            "size": 40
+        },
+        "content": {
+            "align": "right"
+        },
+        "container": {
+            "margin": {
+                "right": 20,
+                "bottom": 10
+            }
+        }
+    },
+    "keypad": {
+        "text": {
+            "color": {
+                "primary": "#fdf6e3",
+                "secondary": "#060606",
+                "accent": "#b58900"
+            },
+            "font": {
+                "size": 25
+            }
+        },
+        "button": {
+            "background": {
+                "color": {
+                    "primary": "#073642",
+                    "secondary": "#a6a6a6",
+                    "accent": "#586e75"
+                }
+            },
+            "margin": 5
+        }
+    }
+}

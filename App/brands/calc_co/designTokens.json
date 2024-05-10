@@ -1,0 +1,52 @@
+{
+    "app": {
+        "color": {
+            "background": "#fdf6e3"
+        },
+        "content": {
+            "justify": "flex-end"
+        },
+        "font": {
+            "family": "FreeMonoBold"
+        }
+    },
+    "display": {
+        "color": {
+            "text": "#586e75"
+        },
+        "font": {
+            "size": 40
+        },
+        "content": {
+            "align": "left"
+        },
+        "container": {
+            "margin": {
+                "right": 20,
+                "bottom": 10
+            }
+        }
+    },
+    "keypad": {
+        "text": {
+            "color": {
+                "primary": "#fff",
+                "secondary": "#060606",
+                "accent": "#fff"
+            },
+            "font": {
+                "size": 25
+            }
+        },
+        "button": {
+            "background": {
+                "color": {
+                    "primary": "#333333",
+                    "secondary": "#a6a6a6",
+                    "accent": "#f09a36"
+                }
+            },
+            "margin": 5
+        }
+    }
+}
